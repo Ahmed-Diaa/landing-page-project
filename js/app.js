@@ -60,7 +60,7 @@ html.style = 'scroll-behavior: smooth'
 // Set sections as active
 let options = {
   root: null,
-  rootMargin: '0px 0px -400px',
+  rootMargin: '-250px 0px',
   threeshold: 0.1,
 }
 let observer = new IntersectionObserver(beActive, options)
