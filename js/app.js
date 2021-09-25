@@ -64,6 +64,7 @@ secLinks.forEach((secLink) => {
     sec.scrollIntoView({ behavior: 'smooth', block: 'center' })
   })
 })
+
 // Set sections as active
 
 let options = {
