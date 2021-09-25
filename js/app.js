@@ -43,6 +43,7 @@
  */
 
 // Build menu
+
 const sections = [...document.querySelectorAll('section')]
 const navBar = document.getElementById('navbar__list')
 for (section of sections) {
@@ -54,10 +55,17 @@ for (section of sections) {
 }
 
 // Scroll to section on link click
-const html = document.querySelector('html')
-html.style = 'scroll-behavior: smooth'
 
+let secLinks = [...document.querySelectorAll('li a')]
+secLinks.forEach((secLink) => {
+  secLink.addEventListener('click', function (event) {
+    event.preventDefault()
+    let sec = document.getElementById(secLink.getAttribute('data-link'))
+    sec.scrollIntoView({ behavior: 'smooth', block: 'center' })
+  })
+})
 // Set sections as active
+
 let options = {
   root: null,
   rootMargin: '-250px 0px',
